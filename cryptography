@@ -1,0 +1,18 @@
+
+## HEEEEEEERE'S Johnny! 
+
+Okay, so we found some important looking files on a linux computer. Maybe they can be used to get a password to the process. 
+Connect with nc 2018shell.picoctf.com 5221. Files can be found here: passwd shadow. 
+
+``` $ ./unshadow password shadow > johnnypass
+
+    $ ./john --show  mypasswd
+    root:password1:0:0:root:/root:/bin/bash
+    
+    $ nc 2018shell.picoctf.com 5221
+    Username: root
+    Password: password1
+    picoCTF{J0hn_1$_R1pp3d_289677b5}
+```
+   
+
